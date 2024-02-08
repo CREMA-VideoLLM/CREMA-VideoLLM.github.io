@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="CREMA: Multimodal Compositional Video Reasoning via Efficient Modular Adaptation and Fusion">
+  <meta name="keywords" content="VLN">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CREMA: Multimodal Compositional Video Reasoning<br>via Efficient Modular Adaptation and Fusion</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./prj_static/css/bulma.min.css">
+  <link rel="stylesheet" href="./prj_static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./prj_static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./prj_static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./prj_static/css/index.css">
+  <!-- <link rel="icon" href="./prj_static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./prj_static/js/fontawesome.all.min.js"></script>
+  <script src="./prj_static/js/bulma-carousel.min.js"></script>
+  <script src="./prj_static/js/bulma-slider.min.js"></script>
+  <script src="./prj_static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://yui010206.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Projects
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://pano-gen.github.io">
+            CREMA
+          </a>
+          <a class="navbar-item" href="https://github.com/Yui010206/SeViLA">
+            SeViLA
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-3 publication-title">CREMA: Multimodal Compositional Video Reasoning via Efficient Modular Adaptation and Fusion</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yui010206.github.io/">Shoubin Yu*</a>     </span>
+              <span class="author-block", style="padding-left:30px">
+                <a href="https://jaehong31.github.io/">Jaehong Yoon*</a>     </span>
+            <span class="author-block", style="padding-left:30px">
+              <a href="https://www.cs.unc.edu/~mbansal/">Mohit Bansal</a></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">University of North Carolina, Chapel Hill</span>
+          </div>
+<!-- 
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">NeurIPS 2023</span>
+          </div> -->
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Yui010206/CREMA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Demo</span>
+                  </a>
+                </span> -->
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<hr>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <center><img src="./images/teaser.png" alt="Teaser" width="80%"></center>
+        <div class="content has-text-justified">
+        Figure 1: We present <b>CREMA</b>, an efficient and modular modality-fusion framework. We utilize a single multi-modal Q-Former with a set of lightweight modality-specific
+        adapters, hence allowing video frames, optical flow, 3D, etc.
+        </div>
+
+
+        <div class="content has-text-justified">
+          <br> <br>
+          <p>
+            Despite impressive advancements in multimodal compositional reasoning approaches, they are still limited in their flexibility and efficiency by processing fixed modality inputs while updating a lot of model parameters.
+            This paper tackles these critical challenges and proposes <b>CREMA</b>, an efficient and modular modality-fusion framework for injecting any new modality into video reasoning. 
+          </p>
+
+          <p>
+            We first augment multiple informative modalities (such as, optical flow, 3D point cloud, audio) from given videos without extra human annotation by leveraging existing pre-trained models. 
+            Next, we introduce a query transformer with multiple parameter-efficient modules associated with each accessible modality. 
+            It projects diverse modality features to the LLM token embedding space, allowing the model to integrate different data types for response generation. 
+            Furthermore, we propose a fusion module designed to compress multimodal queries, maintaining computational efficiency in the LLM while combining additional modalities. 
+            We validate our method on video-3D, video-audio, and video-language reasoning tasks and achieve better/equivalent performance against strong multimodal LLMs, 
+            including BLIP-2, 3D-LLM, and SeViLA while using 96% fewer trainable parameters. We provide extensive analyses of CREMA, 
+            including the impact of each modality on reasoning domains, the design of the fusion module, and example visualizations.     
+          </p>
+        </div>
+      </div>
+    </div>
+
+</section>
+<hr>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+    <h2 class="title is-3">Method</h2>
+
+      <center><img src="./images/method.png" alt="Teaser" width="100%"></center>
+
+      <div class="content has-text-justified">
+        Figure 2: Overview of the <b>CREMA</b> method. The multimodal encoders, Q-former, and LLM are kept frozen in the process.
+          For each modality input, we extract tokens using a corresponding modality-specific adaptation module. Then, we can
+          employ the optional fusion module to blend and compact the obtained tokens. In the end, the LLM can leverage multimodal
+          or modality-fusion tokens, which contain rich representations of different input modalities, to generate responses.
+      </div>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+    <h2 class="title is-3">Visualization Examples</h2>
+
+<center><img src="./images/homepage_vis.png" alt="Teaser" width="100%"></center>
+      <div class="content has-text-justified">
+ <p>
+  Figure 3: Qualitative examples for multimodal compositional video reasoning from SQA3D (Left) and MUSIC-AVQA
+ (Right). The correct predictions are marked by green check marks. 
+ </p>
+ <p>
+Beyond the numerical comparison of the effect integrating
+different sets of modalities for our CREMA method, we
+investigate our model's generated responses according to
+different types of input examples. In Figure 3 Left, CREMA
+with 3D point cloud inputs (P) fails to find the chair and
+respond to the color of the wall, brown, as its 2D scene
+image features are incorporated in 3D point cloud features.
+CREMA with Video (V) and V, P also predict inaccurate
+chair color, black. However, with the assistance of depth information, 
+the method can capture objects accurately and
+find the designated chair as well. Similarly, in Figure 3 Right,
+optical flow inputs help to find musicians with their poses
+playing instruments, so our CREMA method can tell the middle instrument is not being played at the beginning, but from the left.
+</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<hr>
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+    <h2 class="title is-3">Results</h2>
+    <h2 class="title is-5">Test Leaderboard Performance</h2>
+
+      <div class="content has-text-justified">
+<p>Comparison with state-of-the-art agents on Room-to-Room (R2R) and Cooperative Vision-and-Dialog Navigation (CVDN) validation unseen set and test leaderboard.</p>
+      </div>
+
+    </div>
+  </div>
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-5">Ablation Results -- Effectiveness of Speaker Data</h2>
+
+    <center><img src="./PanoGen/table1.png" alt="Teaser" width="100%"></center>
+
+    <div class="content has-text-justified">
+      We show the effectiveness of utilizing the speaker data generated for our PanoGen environments for VLN pre-training on R2R, R4R, and CVDN validation unseen set.
+    </div>
+  </div>
+  </div>
+
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-5">Ablation Results -- Effectiveness of Observation Augmentation</h2>
+
+    <center><img src="./PanoGen/table2.png" alt="Teaser" width="100%"></center>
+
+    <div class="content has-text-justified">
+      We show the effectiveness of replacing the original environment with our panoramic observation during fine-tuning on R2R, R4R, and CVDN validation unseen set.
+    </div>
+  </div>
+  </div>
+  </div>
+</section> -->
+<hr>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{yu2024crema,
+  author    = {Shoubin Yu, Jaehong Yoon and Mohit Bansal},
+  title     = {CREMA: Multimodal Compositional Video Reasoning via Efficient Modular Adaptation and Fusion},
+  journal   = {arxiv},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p style="text-align:right;font-size:small;">
+          <a href="https://github.com/nerfies/nerfies.github.io">
+            This guy makes a nice webpage.
+          </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
