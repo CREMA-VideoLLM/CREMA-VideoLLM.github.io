@@ -6,7 +6,8 @@
         content="CREMA: Multimodal Compositional Video Reasoning via Efficient Modular Adaptation and Fusion">
   <meta name="keywords" content="VLN">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CREMA: Multimodal Compositional Video Reasoning<br>via Efficient Modular Adaptation and Fusion</title>
+  
+  <title>CREMA: Multimodal Compositional Video Reasoning via Efficient Modular Adaptation and Fusion</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -26,6 +27,7 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
+
 <body>
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -68,7 +70,8 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-3 publication-title">CREMA: Multimodal Compositional Video Reasoning via Efficient Modular Adaptation and Fusion</h1>
+          <h1 class="title is-3 publication-title">
+            <img src="images/crema.png" alt="Image description" class="title-icon" style="width: 35px; height: auto;"> CREMA: Multimodal Compositional Video Reasoning <br> via Efficient Modular Adaptation and Fusion</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://yui010206.github.io/">Shoubin Yu*</a>     </span>
@@ -119,7 +122,7 @@
                   </a>
               </span>
               <!-- Dataset Link. -->
-              <!-- <span class="link-block">
+              <span class="link-block">
                 <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -127,7 +130,7 @@
                   </span>
                   <span>Demo</span>
                   </a>
-                </span> -->
+                </span>
             </div>
 
         </div>
@@ -147,7 +150,7 @@
         <h2 class="title is-3">Overview</h2>
         <center><img src="./images/teaser.png" alt="Teaser" width="80%"></center>
         <div class="content has-text-justified">
-        Figure 1: We present <b>CREMA</b>, an efficient and modular modality-fusion framework. We utilize a single multi-modal Q-Former with a set of lightweight modality-specific
+          <b>Figure 1:</b>  We present <b>CREMA</b>, an efficient and modular modality-fusion framework. We utilize a single multi-modal Q-Former with a set of lightweight modality-specific
         adapters, hence allowing video frames, optical flow, 3D, etc.
         </div>
 
@@ -185,7 +188,7 @@
       <center><img src="./images/method.png" alt="Teaser" width="100%"></center>
 
       <div class="content has-text-justified">
-        Figure 2: Overview of the <b>CREMA</b> method. The multimodal encoders, Q-former, and LLM are kept frozen in the process.
+        <b>Figure 2:</b> Overview of the <b>CREMA</b> method. The multimodal encoders, Q-former, and LLM are kept frozen in the process.
           For each modality input, we extract tokens using a corresponding modality-specific adaptation module. Then, we can
           employ the optional fusion module to blend and compact the obtained tokens. In the end, the LLM can leverage multimodal
           or modality-fusion tokens, which contain rich representations of different input modalities, to generate responses.
@@ -197,6 +200,73 @@
 </section>
 
 <hr>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+    <h2 class="title is-3">Results</h2>
+
+    </div>
+  </div>
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-5">Fine-tuning Results on Video-3D Reasoning Task (<a href="https://github.com/SilongYong/SQA3D">SQA3D</a>)</h2>
+
+    <center><img src="./images/table1.png" alt="Teaser" width="100%"></center>
+
+    <div class="content has-text-justified">
+      Our method is significantly efficient yet outperforms publicly available, strong MLLM baselines on 3Dassociated video reasoning.
+    </div>
+  </div>
+  </div>
+
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-5">Fine-tuning Results on Video-Audio Reasoning Task (<a href="https://github.com/GeWu-Lab/MUSIC-AVQA">MUSIC-AVQA</a>)</h2>
+
+    <center><img src="./images/table2.png" alt="Teaser" width="100%"></center>
+
+    <div class="content has-text-justified">
+      CREMA method achieves superior video-audio reasoning ability.
+    </div>
+  </div>
+  </div>
+
+
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-5">Fine-tuning Results on Video Reasoning Task (<a href="https://github.com/doc-doc/NExT-QA">NeXT-QA</a>)</h2>
+
+    <center><img src="./images/table3.png" alt="Teaser" width="100%"></center>
+
+    <div class="content has-text-justified">
+      CREMA method achieves superior performance against strong vision-language reasoning methods on the NeXT-QA dataset.
+    </div>
+  </div>
+  </div>
+
+
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-5">Zero-shot Evalution on Video-3D and Video-Audio Reasoning Tasks</h2>
+
+    <center><img src="./images/table4.png" alt="Teaser" width="60%"></center>
+
+    <div class="content has-text-justified">
+      CREMA method also achieves superior zero-shot performance on compositional video reasoning.
+    </div>
+  </div>
+  </div>
+
+
+
+  </div>
+</section>
+<hr>
+
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -230,46 +300,6 @@ playing instruments, so our CREMA method can tell the middle instrument is not b
   </div>
   </div>
 </section>
-<hr>
-
-<!-- <section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-    <h2 class="title is-3">Results</h2>
-    <h2 class="title is-5">Test Leaderboard Performance</h2>
-
-      <div class="content has-text-justified">
-<p>Comparison with state-of-the-art agents on Room-to-Room (R2R) and Cooperative Vision-and-Dialog Navigation (CVDN) validation unseen set and test leaderboard.</p>
-      </div>
-
-    </div>
-  </div>
-  <div class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-      <h2 class="title is-5">Ablation Results -- Effectiveness of Speaker Data</h2>
-
-    <center><img src="./PanoGen/table1.png" alt="Teaser" width="100%"></center>
-
-    <div class="content has-text-justified">
-      We show the effectiveness of utilizing the speaker data generated for our PanoGen environments for VLN pre-training on R2R, R4R, and CVDN validation unseen set.
-    </div>
-  </div>
-  </div>
-
-  <div class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-      <h2 class="title is-5">Ablation Results -- Effectiveness of Observation Augmentation</h2>
-
-    <center><img src="./PanoGen/table2.png" alt="Teaser" width="100%"></center>
-
-    <div class="content has-text-justified">
-      We show the effectiveness of replacing the original environment with our panoramic observation during fine-tuning on R2R, R4R, and CVDN validation unseen set.
-    </div>
-  </div>
-  </div>
-  </div>
-</section> -->
 <hr>
 
 <section class="section" id="BibTeX">
